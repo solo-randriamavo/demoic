@@ -10,6 +10,12 @@ pipeline {
     }
 
     stages {
+        stage('Test email notification') {
+            steps {
+                sh 'exit 1'
+            }
+        }
+
         stage('git checkout') {
             steps {
                 git branch: 'main',
