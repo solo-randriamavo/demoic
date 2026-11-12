@@ -53,4 +53,15 @@ pipeline {
             }
         }
     }
+
+    post {
+        failure {
+            emailext(
+                subject: "Échec du build #${env.BUILD_NUMBER} - ${env.JOB_NAME}",
+                body: "Le build a échoué. Consulte les détails : ${env.BUILD_URL}",
+                recipientProviders: [requestor()],
+                to: 'rndfitahiana@gmail.com'
+            )
+        }
+    }
 }
