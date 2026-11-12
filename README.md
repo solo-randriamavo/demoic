@@ -14,3 +14,5 @@ java -cp target/classes com.devops.tp1.DemoIC
 ## Publication Maven
 
 Le `pom.xml` cible les dépôts `maven-releases` et `maven-snapshots` de Nexus sur le réseau Docker. Les identifiants correspondants doivent être configurés dans Jenkins, jamais dans ce dépôt.
+
+Modification pour tester le webhook Jenkins.
